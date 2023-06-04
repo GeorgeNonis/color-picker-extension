@@ -1,4 +1,4 @@
-A simple Color Picker with palette Chrome Extension build with React!
+❗A simple Color Picker with palette Chrome Extension build with React!
 
 Feel Free to use it and as well to pass me your thoughts and comments! georgenonis@gmail.com
 
@@ -14,9 +14,9 @@ In the project directory, you can run:
 
 bundle the extension.
 
-### `npm run watch`
+### `npm run start`
 
-bundle the extension with interactive watch mode.
+start the development mode and watch your changes.
 
 ## Learn More
 
