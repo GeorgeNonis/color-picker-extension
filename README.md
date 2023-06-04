@@ -1,4 +1,6 @@
-A simple Hello World Chrome extension using React. 
+A simple Color Picker with palette Chrome Extension build with React!
+
+Feel Free to use it and as well to pass me your thoughts and comments! georgenonis@gmail.com
 
 # Getting Started with Create React App
 
@@ -9,9 +11,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm run build`
+
 bundle the extension.
 
 ### `npm run watch`
+
 bundle the extension with interactive watch mode.
 
 ## Learn More
