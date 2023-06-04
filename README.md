@@ -24,7 +24,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### How to install node_modules :nut_and_bolt:
 
-    npm i add
+    npm i
 
 ## Available Scripts
 
