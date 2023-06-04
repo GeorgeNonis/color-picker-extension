@@ -1,31 +1,41 @@
 import { useEffect, useState } from "react";
 import { RGBColor } from "../../interfaces";
+import { DEFAULT_COLORS, DEFAULT_WHITE } from "../../../config";
 
-export const useColor = ({ palette }: { palette: boolean }) => {
+interface useColorProps {
+  palette: boolean;
+  i: number;
+  c: RGBColor;
+}
+
+export const useColor = ({ palette, i, c }: useColorProps) => {
+  const DEFAULT_WHITE_STRG = JSON.stringify(DEFAULT_WHITE);
+  const C_STRG = JSON.stringify(c);
   const [visibility, setVisibility] = useState(false);
   const [copyColor, setCopyColor] = useState(false);
-  const [btnState, setBtnState] = useState(false);
+  const [btnState, setBtnState] = useState(C_STRG !== DEFAULT_WHITE_STRG);
+  // console.log(C_STRG === DEFAULT_WHITE_STRG);
 
+  const { b, g, r, a } = c;
+  const obj = localStorage.getItem("colors");
+  const colors = JSON.parse(obj!);
   const [color, setColor] = useState<RGBColor>({
-    r: 255,
-    g: 255,
-    b: 255,
-    a: 100,
+    ...colors[i],
   });
-  const { b, g, r, a } = color;
 
   const setColorHandler = (clr: RGBColor) => {
     setColor(clr);
     setBtnState(true);
+    colors[i] = clr;
+
+    localStorage.setItem("colors", JSON.stringify(colors));
   };
 
   const clearColorhandler = () => {
-    setColor({
-      r: 255,
-      g: 255,
-      b: 255,
-      a: 100,
-    });
+    const clr = { r: 255, g: 255, b: 255, a: 100 };
+    setColor(clr);
+    colors[i] = clr;
+    localStorage.setItem("colors", JSON.stringify(colors));
     setBtnState(false);
   };
 
@@ -50,13 +60,16 @@ export const useColor = ({ palette }: { palette: boolean }) => {
   };
 
   useEffect(() => {
-    setColor({
-      r: 255,
-      g: 255,
-      b: 255,
-      a: 100,
-    });
-    setBtnState(false);
+    if (palette) {
+      setColor({
+        r: 255,
+        g: 255,
+        b: 255,
+        a: 100,
+      });
+      localStorage.setItem("colors", JSON.stringify(DEFAULT_COLORS));
+      setBtnState(false);
+    }
   }, [palette]);
 
   useEffect(() => {

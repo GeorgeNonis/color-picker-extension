@@ -1,14 +1,9 @@
-import { RGBColor } from "react-color";
 import { useColor } from "./useColor";
+import { ColorProps } from "../../interfaces";
 
-const Color = ({
-  palette,
-  sketchPickerColor,
-}: {
-  palette: boolean;
-  sketchPickerColor: RGBColor;
-}) => {
-  const { values, handlers } = useColor({ palette });
+const Color = ({ ...rest }: ColorProps) => {
+  const { palette, sketchPickerColor, i, c } = rest;
+  const { values, handlers } = useColor({ palette, i, c });
   const { b, g, r, a } = values.color;
   return (
     <div className="colordiv">

@@ -4,3 +4,10 @@ export interface RGBColor {
   g: number;
   r: number;
 }
+
+export interface ColorProps {
+  palette: boolean;
+  sketchPickerColor: RGBColor;
+  i: number;
+  c: RGBColor;
+}

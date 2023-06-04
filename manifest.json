@@ -7,6 +7,7 @@
     "48": "icon.png",
     "128": "icon.png"
   },
+  "permissions": ["storage"],
   "action": {
     "default_popup": "js/index.html",
     "default_title": "Color Picker - Nonis"
