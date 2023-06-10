@@ -1,49 +1,55 @@
-### <h1>:exclamation: Color Picker - Nonis :exclamation:</h1>
+# Color Picker - Nonis
 
-### Target of Color Picker :triangular_flag_on_post:
+## :exclamation: Color Picker - Nonis
 
-<p>
-      <h3>Tool for Developers and UI/UX designers. Generator your color. Copy it. Add it to your palette and have it 
-      available for whenever you want!</h3>
+Color Picker - Nonis is a powerful tool designed for developers and UI/UX designers. It allows you to generate colors, copy them, and add them to your palette for easy access whenever you need them.
 
-</p>
+## :triangular_flag_on_post: Target of Color Picker
 
-<p>
-  
-  <img alt="Typescript" src="./readme_imgs/typescript.png" width="50"/>
-  <img alt="React" src="./readme_imgs/react.png" width="50"/>
-  <img alt="github actions" src="./readme_imgs/github.png" width="50"/>
-  <img alt="git" src="./readme_imgs/git.png" width="50"/>
-  <img alt="Css" src="./readme_imgs/css3.png" width="50"/>
-  <img alt="html5" src="./readme_imgs/html5.png" width="50"/>
-</p>
+Color Picker - Nonis aims to provide the following features:
 
-# Getting Started with Create React App
+- Generate Colors: Easily generate colors to find the perfect shades for your projects.
+- Copy Color Codes: Copy the color codes (hex, RGB, etc.) with a single click for seamless integration into your codebase.
+- Create Palettes: Add colors to your palette and organize them for quick reference and reuse.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Color Picker - Nonis](./readme_imgs/color-picker-nonis.png)
 
-### How to install node_modules :nut_and_bolt:
+## :hammer_and_wrench: Technologies Used
 
-    npm i
+Color Picker - Nonis is built using the following technologies:
 
-## Available Scripts
+- ![Typescript](./readme_imgs/typescript.png) Typescript
+- ![React](./readme_imgs/react.png) React
+- ![Github Actions](./readme_imgs/github.png) GitHub Actions
+- ![Git](./readme_imgs/git.png) Git
+- ![CSS3](./readme_imgs/css3.png) CSS3
+- ![HTML5](./readme_imgs/html5.png) HTML5
 
-In the project directory, you can run:
+## :rocket: Getting Started
 
-### `npm run build`
+These instructions will help you get started with Color Picker - Nonis:
 
-bundle the extension.
+### Installation
 
-### `npm run start`
+1. Clone the repository.
+2. Install the required node modules by running the following command:
 
-start the development mode and watch your changes.
+## :computer: Development
 
-## Learn More
+In the project directory, you can run the following scripts:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm run build`: Bundles the extension for production.
+- `npm run start`: Starts the development mode and watches for changes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :book: Learn More
 
-### Comments in the project :page_with_curl:
+To learn more about how Nonis was created, you can refer to the following documentation:
 
-<p>Any further/additional comments or tips are very welcome:fire:</p>
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React documentation](https://reactjs.org/)
+
+## :bulb: Contributing
+
+Contributions, comments, and suggestions are welcome! Feel free to open an issue or submit a pull request with any improvements you'd like to make.
+
+We hope you find Color Picker - Nonis useful in your design and development workflows!
