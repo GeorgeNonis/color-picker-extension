@@ -8,7 +8,9 @@ const Palette = ({ sketchPickerColor }: { sketchPickerColor: RGBColor }) => {
     <div className="palettediv">
       <div className="palettewithcolors">
         {colors.map((c: any, i: number) => {
-          return <Color key={i} {...{ palette, sketchPickerColor, i, c }} />;
+          return (
+            <Color key={i} {...{ palette, sketchPickerColor, i, c, colors }} />
+          );
         })}
       </div>
       <button className="clearpalette" onClick={clearPaletteHandler}>

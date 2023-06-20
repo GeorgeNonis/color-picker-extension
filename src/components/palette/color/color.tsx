@@ -2,8 +2,8 @@ import { useColor } from "./useColor";
 import { ColorProps } from "../../interfaces";
 
 const Color = ({ ...rest }: ColorProps) => {
-  const { palette, sketchPickerColor, i, c } = rest;
-  const { values, handlers } = useColor({ palette, i, c });
+  const { palette, sketchPickerColor, i, c, colors } = rest;
+  const { values, handlers } = useColor({ palette, i, c, colors });
   const { b, g, r, a } = values.color;
   return (
     <div className="colordiv">

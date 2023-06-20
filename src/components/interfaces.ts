@@ -10,4 +10,5 @@ export interface ColorProps {
   sketchPickerColor: RGBColor;
   i: number;
   c: RGBColor;
+  colors: RGBColor[];
 }

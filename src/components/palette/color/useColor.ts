@@ -6,21 +6,19 @@ interface useColorProps {
   palette: boolean;
   i: number;
   c: RGBColor;
+  colors: RGBColor[];
 }
 
-export const useColor = ({ palette, i, c }: useColorProps) => {
+export const useColor = ({ palette, i, c, colors }: useColorProps) => {
   const DEFAULT_WHITE_STRG = JSON.stringify(DEFAULT_WHITE);
   const C_STRG = JSON.stringify(c);
   const [visibility, setVisibility] = useState(false);
   const [copyColor, setCopyColor] = useState(false);
   const [btnState, setBtnState] = useState(C_STRG !== DEFAULT_WHITE_STRG);
-  // console.log(C_STRG === DEFAULT_WHITE_STRG);
 
   const { b, g, r, a } = c;
-  const obj = localStorage.getItem("colors");
-  const colors = JSON.parse(obj!);
   const [color, setColor] = useState<RGBColor>({
-    ...colors[i],
+    ...c,
   });
 
   const setColorHandler = (clr: RGBColor) => {
@@ -28,14 +26,14 @@ export const useColor = ({ palette, i, c }: useColorProps) => {
     setBtnState(true);
     colors[i] = clr;
 
-    localStorage.setItem("colors", JSON.stringify(colors));
+    chrome.storage.sync.set({ colors }, () => {});
   };
 
   const clearColorhandler = () => {
     const clr = { r: 255, g: 255, b: 255, a: 100 };
     setColor(clr);
     colors[i] = clr;
-    localStorage.setItem("colors", JSON.stringify(colors));
+    chrome.storage.sync.set({ colors }, () => {});
     setBtnState(false);
   };
 

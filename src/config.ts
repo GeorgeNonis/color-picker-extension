@@ -61,4 +61,4 @@ export const DEFAULT_COLORS = [
   },
 ];
 
-export const DEFAULT_WHITE = { r: 255, g: 255, b: 255, a: 100 };
+export const DEFAULT_WHITE = { a: 100, b: 255, g: 255, r: 255 };
