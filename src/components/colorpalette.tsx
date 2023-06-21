@@ -2,9 +2,11 @@ import { SketchPicker } from "react-color";
 import "../App.css";
 import { useColorPalette } from "./useColorPalette";
 import Palette from "./palette";
+import Eyedropper from "./eyedrop/eyedrop";
 
 const ColorPallete = () => {
-  const { setSketchPickerColor, sketchPickerColor } = useColorPalette();
+  const { hexToRGB, setSketchPickerColor, sketchPickerColor } =
+    useColorPalette();
 
   return (
     <div
@@ -19,6 +21,7 @@ const ColorPallete = () => {
           }}
           color={sketchPickerColor}
         />
+        <Eyedropper hexToRGB={hexToRGB} />
       </div>
       <Palette sketchPickerColor={sketchPickerColor} />
     </div>

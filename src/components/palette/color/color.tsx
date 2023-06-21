@@ -13,29 +13,25 @@ const Color = ({ ...rest }: ColorProps) => {
       <button
         className="clear"
         onClick={() => handlers.setColorHandler(sketchPickerColor)}
-        disabled={values.btnState}
+        // disabled={values.btnState}
       >
         Add
       </button>
       <button
         className="clear"
         onClick={handlers.clearColorhandler}
-        disabled={!values.btnState}
+        // disabled={!values.btnState}
       >
         Clear
       </button>
       <div
-        onMouseEnter={() =>
-          values.btnState ? handlers.setVisibility(true) : undefined
-        }
-        onMouseLeave={() =>
-          values.btnState ? handlers.setVisibility(false) : undefined
-        }
-        onClick={values.btnState ? handlers.copyColorHandler : undefined}
+        onMouseEnter={() => handlers.setVisibility(true)}
+        onMouseLeave={() => handlers.setVisibility(false)}
+        onClick={handlers.copyColorHandler}
         className="color"
         style={{
           backgroundColor: `rgba(${r},${g},${b},${a})`,
-          cursor: `${!values.btnState ? "unset" : "pointer"}`,
+          cursor: "pointer",
         }}
       >
         {values.visibility && (

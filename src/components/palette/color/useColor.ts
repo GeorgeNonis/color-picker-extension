@@ -21,19 +21,19 @@ export const useColor = ({ palette, i, c, colors }: useColorProps) => {
     ...c,
   });
 
-  const setColorHandler = (clr: RGBColor) => {
+  const setColorHandler = async (clr: RGBColor) => {
     setColor(clr);
     setBtnState(true);
     colors[i] = clr;
-
-    chrome.storage.sync.set({ colors }, () => {});
+    console.log({ clr });
+    await chrome.storage.sync.set({ colors }, () => {});
   };
 
-  const clearColorhandler = () => {
+  const clearColorhandler = async () => {
     const clr = { r: 255, g: 255, b: 255, a: 100 };
     setColor(clr);
     colors[i] = clr;
-    chrome.storage.sync.set({ colors }, () => {});
+    await chrome.storage.sync.set({ colors }, () => {});
     setBtnState(false);
   };
 
@@ -65,8 +65,7 @@ export const useColor = ({ palette, i, c, colors }: useColorProps) => {
         b: 255,
         a: 100,
       });
-      localStorage.setItem("colors", JSON.stringify(DEFAULT_COLORS));
-      setBtnState(false);
+      chrome.storage.sync.set({ colors: DEFAULT_COLORS }, () => {});
     }
   }, [palette]);
 
