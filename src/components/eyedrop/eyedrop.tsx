@@ -20,7 +20,6 @@ const Eyedropper = ({ hexToRGB }: EyeDropProps) => {
       })
 
       .catch((e) => {
-        console.log(e);
         if (!e.canceled) setError(e);
       });
   };

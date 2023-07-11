@@ -9,6 +9,8 @@ Color Picker - Nonis is a powerful tool designed for developers and UI/UX design
 Color Picker - Nonis aims to provide the following features:
 
 - Generate Colors: Easily generate colors to find the perfect shades for your projects.
+- EyeDrop Feature - Capture Colors from the Current Tab:
+- Effortlessly extract and utilize colors from the current tab, simplifying your color selection and matching designs to web page elements.
 - Copy Color Codes: Copy the color codes (hex, RGB, etc.) with a single click for seamless integration into your codebase.
 - Create Palettes: Add colors to your palette and organize them for quick reference and reuse.
 

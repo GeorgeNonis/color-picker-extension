@@ -14,11 +14,9 @@ export const usePalette = () => {
       const { colors } = result;
       if (colors === undefined) {
         chrome.storage.sync.set({ colors: DEFAULT_COLORS }, () => {
-          console.log("they dont exist");
           setcolors(DEFAULT_COLORS);
         });
       } else {
-        console.log("they exist");
         setcolors(colors);
       }
     });

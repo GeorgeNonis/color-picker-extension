@@ -25,7 +25,6 @@ export const useColor = ({ palette, i, c, colors }: useColorProps) => {
     setColor(clr);
     setBtnState(true);
     colors[i] = clr;
-    console.log({ clr });
     await chrome.storage.sync.set({ colors }, () => {});
   };
 
@@ -38,7 +37,9 @@ export const useColor = ({ palette, i, c, colors }: useColorProps) => {
   };
 
   const copyColorHandler = () => {
-    navigator.clipboard.writeText(`rgba(${r},${g},${b},${a})`);
+    navigator.clipboard.writeText(
+      `rgba(${color.r},${color.g},${color.b},${color.a})`
+    );
     setVisibility(false);
     setCopyColor(true);
   };
